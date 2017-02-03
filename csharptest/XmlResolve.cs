@@ -6,8 +6,8 @@ namespace csharptest
 	public class XmlResolve
 	{
         private string _xmlPath;
-        List<Node> nodeList = new List<Node>();
-        List<Edge> edgeList = new List<Edge>();
+        public List<Node> nodeList = new List<Node>();
+        public List<Edge> edgeList = new List<Edge>();
         public XmlResolve()
 		{
             this._xmlPath = string.Empty;
@@ -28,14 +28,18 @@ namespace csharptest
         {
             xmlPath = "test1.xml";
             XmlDocument doc = new XmlDocument();
-            doc.Load(xmlPath);
-            XmlNodeList xmlNodeList = doc.SelectNodes("node");
-            XmlNodeList xmlEdgeList = doc.SelectNodes("edge");
+            XmlElement root = null;
 
-            Node node = new Node();
-            Edge edge = new Edge();
+            doc.Load(xmlPath);
+            root = doc.DocumentElement;
+            XmlNodeList xmlNodeList = root.SelectNodes("//node");
+            XmlNodeList xmlEdgeList = root.SelectNodes("//edge");
+
+            
+            
             foreach (XmlNode xn1 in xmlNodeList)
             {
+                Node node = new Node();
                 XmlElement xe = (XmlElement) xn1.ChildNodes[0].ChildNodes[0];
                 node.Community = xe.GetAttribute("value").ToString();
                 xe = (XmlElement)xn1.ChildNodes[2];
@@ -47,6 +51,7 @@ namespace csharptest
             }
             foreach (XmlNode xn1 in xmlEdgeList)
             {
+                Edge edge = new Edge();
                 XmlElement xe = (XmlElement)xn1;
                 edge.Id = xe.GetAttribute("id");
                 edge.Source = xe.GetAttribute("source");
