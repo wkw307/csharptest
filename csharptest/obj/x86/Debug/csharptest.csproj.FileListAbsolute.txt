@@ -3,3 +3,5 @@ C:\Users\wkw\Documents\csharptest\csharptest\bin\Debug\csharptest.pdb
 C:\Users\wkw\Documents\csharptest\csharptest\obj\x86\Debug\csharptest.csprojResolveAssemblyReference.cache
 C:\Users\wkw\Documents\csharptest\csharptest\obj\x86\Debug\csharptest.exe
 C:\Users\wkw\Documents\csharptest\csharptest\obj\x86\Debug\csharptest.pdb
+D:\backup3-10\csharptest\csharptest\obj\x86\Debug\csharptest.exe
+D:\backup3-10\csharptest\csharptest\obj\x86\Debug\csharptest.pdb
