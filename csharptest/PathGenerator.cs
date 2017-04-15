@@ -27,7 +27,7 @@ namespace csharptest
 		/// <returns>The path.</returns>
 		/// <param name="edge">Edge.</param>
 		/// <param name="xmlResolve">Xml resolve.</param>
-		public List<PathPRS> calPath(Edge edge, XmlResolve xmlResolve)
+		public List<PathPRS> CalPath(Edge edge, XmlResolve xmlResolve)
 		{
 			float sx = 0, sy = 0, tx = 0, ty = 0;
 			int tag = 0;
@@ -53,11 +53,11 @@ namespace csharptest
 
 			if (sx > tx)
 			{
-				return calLine(sx, sy, tx, ty, 1);
+				return CalLine(tx, ty, sx, sy, 20);
 			}
 			else
 			{
-				return calLine(tx, ty, sx, sy, 1);
+				return CalLine(sx, sy, tx, ty, 20);
 			}
 		}
 
@@ -70,7 +70,7 @@ namespace csharptest
 		/// <param name="tx">目标的横坐标</param>
 		/// <param name="ty">目标的纵坐标</param>
 		/// <param name="delta">每两个点之间的横坐标或纵坐标的间隔</param>
-		public List<PathPRS> calLine(float sx, float sy, float tx, float ty, float delta)
+		public List<PathPRS> CalLine(float sx, float sy, float tx, float ty, float delta)
 		{
 			List<PathPRS> line = new List<PathPRS>();
 			float cx = sx, cy = sy;
@@ -98,7 +98,7 @@ namespace csharptest
 						cPRS.PositionX = cx;
 						cPRS.PositionY = cy;
 						line.Add(cPRS);
-						cy += delta;
+						cy -= delta;
 					}
 				}
 				else
@@ -109,7 +109,7 @@ namespace csharptest
 						cPRS.PositionX = cx;
 						cPRS.PositionY = cy;
 						line.Add(cPRS);
-						cy -= delta;
+						cy += delta;
 					}
 				}
 			}
@@ -117,14 +117,23 @@ namespace csharptest
 			{
 
 				float m = (sx - tx) / (sy - ty);
-				while (Math.Abs(cy - ty) < delta)
+				while (Math.Abs(cy - ty) > delta)
 				{
 					PathPRS cPRS = new PathPRS();
 					cPRS.PositionX = cx;
 					cPRS.PositionY = cy;
 					line.Add(cPRS);
-					cy += delta;
-					cx = m * delta + cy;
+					if (sy > ty)
+					{
+						cy -= delta;
+						cx = -m * delta + cx;
+					}
+					else
+					{
+						cy += delta;
+						cx = m * delta + cx;
+					}
+
 				}
 
 			}

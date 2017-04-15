@@ -53,6 +53,7 @@
     <Compile Include="Edge.cs" />
     <Compile Include="PathGenerator.cs" />
     <Compile Include="PathPRS.cs" />
+    <Compile Include="ForestGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

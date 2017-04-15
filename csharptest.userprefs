@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{3722FF14-58AB-4FE2-B3D0-10C0B1B0D4C5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="csharptest/PathPRS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="csharptest/PathGenerator.cs">
     <Files>
       <File FileName="csharptest/LeafPRS.cs" Line="16" Column="45" />
       <File FileName="csharptest/Program.cs" Line="12" Column="1" />
-      <File FileName="csharptest/PathGenerator.cs" Line="53" Column="4" />
+      <File FileName="csharptest/ForestGenerator.cs" Line="19" Column="5" />
+      <File FileName="csharptest/PathGenerator.cs" Line="30" Column="30" />
       <File FileName="csharptest/XmlResolve.cs" Line="10" Column="25" NotebookId="1" />
       <File FileName="csharptest/Edge.cs" Line="12" Column="25" NotebookId="1" />
       <File FileName="csharptest/Node.cs" Line="14" Column="40" NotebookId="1" />
-      <File FileName="csharptest/PathPRS.cs" Line="16" Column="36" NotebookId="1" />
+      <File FileName="csharptest/PathPRS.cs" Line="7" Column="4" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
