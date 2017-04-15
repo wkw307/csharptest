@@ -41,21 +41,21 @@ namespace csharptest
             {
                 Node node = new Node();
                 XmlElement xe = (XmlElement) xn1.ChildNodes[0].ChildNodes[0];
-                node.Community = xe.GetAttribute("value").ToString();
+                node.community = xe.GetAttribute("value").ToString();
                 xe = (XmlElement)xn1.ChildNodes[2];
-                node.YPosition = xe.GetAttribute("y").ToString();
-                node.XPosition = xe.GetAttribute("x").ToString();
+                node.yPosition = xe.GetAttribute("y").ToString();
+                node.xPosition = xe.GetAttribute("x").ToString();
                 xe = (XmlElement)xn1;
-                node.Id = xe.GetAttribute("id").ToString();
+                node.id = xe.GetAttribute("id").ToString();
                 nodeList.Add(node);
             }
             foreach (XmlNode xn1 in xmlEdgeList)
             {
                 Edge edge = new Edge();
                 XmlElement xe = (XmlElement)xn1;
-                edge.Id = xe.GetAttribute("id");
-                edge.Source = xe.GetAttribute("source");
-                edge.Target = xe.GetAttribute("target");
+                edge.id = xe.GetAttribute("id");
+                edge.source = xe.GetAttribute("source");
+                edge.target = xe.GetAttribute("target");
                 edgeList.Add(edge);
             }
         }

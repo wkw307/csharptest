@@ -1,0 +1,10 @@
+/Users/wkw307/Documents/csharptest/csharptest/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/wkw307/Documents/csharptest/csharptest/obj/x86/Debug/csharptest.exe
+/Users/wkw307/Documents/csharptest/csharptest/obj/x86/Debug/csharptest.pdb
+/Users/wkw307/Documents/csharptest/csharptest/bin/Debug/Newtonsoft.Json.dll
+/Users/wkw307/Documents/csharptest/csharptest/bin/Debug/csharptest.exe.config
+/Users/wkw307/Documents/csharptest/csharptest/bin/Debug/csharptest.exe.mdb
+/Users/wkw307/Documents/csharptest/csharptest/bin/Debug/csharptest.pdb
+/Users/wkw307/Documents/csharptest/csharptest/bin/Debug/csharptest.exe
+/Users/wkw307/Documents/csharptest/csharptest/obj/x86/Debug/csharptest.exe.mdb
+/Users/wkw307/Documents/csharptest/csharptest/bin/Debug/MySql.Data.dll
